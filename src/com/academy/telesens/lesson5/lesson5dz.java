@@ -28,6 +28,9 @@ public class lesson5dz {
         customDate.setYear(myYear);
         customDate.validate(myDay, myMonth, myYear);
         System.out.println(customDate.getFormattedDate(myDay, myMonth, myYear));
+
+        Operator oper = new Operator();
+
     }
 }
 

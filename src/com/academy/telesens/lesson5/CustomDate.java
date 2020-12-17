@@ -30,7 +30,7 @@ public class CustomDate {
     }
 
     public String getFormattedDate(int day, int month, int year) {
-        String stroka = this.getDay() + "." + this.getMonth() + "." + this.getYear();
+        String stroka = this.getDay() + "." + String.format("%02d",this.getMonth()) + "." + this.getYear();
         return stroka;
     }
 
@@ -48,4 +48,13 @@ public class CustomDate {
         System.out.println("Вы ввели невалидное значение даты");
     }
     }
+
+    @Override
+    public String toString()
+    {
+        return String.format("%02d",this.getDay()) + " " + String.format("%02d",this.getMonth())
+                + " " + String.format("%04d",this.getYear());
+
+    }
+
 }
