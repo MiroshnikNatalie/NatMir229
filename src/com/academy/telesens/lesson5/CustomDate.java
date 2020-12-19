@@ -1,9 +1,12 @@
 package com.academy.telesens.lesson5;
 
+import com.academy.telesens.lesson6.DateFormat;
+
 public class CustomDate {
     private int day;
     private int month;
     private int year;
+    private DateFormat format;
 
     public int getDay() {
         return day;
@@ -29,9 +32,37 @@ public class CustomDate {
         this.year = year;
     }
 
+    // возвращает дату в формате по умолчанию - RU: 24.01.2011
     public String getFormattedDate(int day, int month, int year) {
         String stroka = this.getDay() + "." + String.format("%02d",this.getMonth()) + "." + this.getYear();
         return stroka;
+    }
+
+    public void getFormattedDate(DateFormat format){
+        switch (format) {
+            case RU:
+                System.out.println(String.format("%02d",this.getDay()) + "."
+                        + String.format("%02d",this.getMonth()) + "."
+                        + String.format("%04d",this.getYear()));
+            case UK:
+                System.out.println(String.format("%02d",this.getDay()) + "/"
+                        + String.format("%02d",this.getMonth()) + "/"
+                        + String.format("%04d",this.getYear()));
+
+            case USA:
+                System.out.println(String.format("%02d",this.getMonth()) + "-"
+                        + String.format("%02d",this.getDay()) + "-"
+                        + String.format("%04d",this.getYear()));
+            case ENG:
+                System.out.println(String.format("%02d",this.getDay()) + "-"
+                        + String.format("%02d",this.getMonth()) + "-"
+                        + String.format("%04d",this.getYear()));
+            case CUSTOM:
+                System.out.println(String.format("%02d",this.getDay()) + "."
+                        + String.format("%02d",this.getMonth()) + "."
+                        + String.format("%04d",this.getYear()));
+        }
+
     }
 
     public static void validate(int vDay, int vMonth, int vYear) {

@@ -15,6 +15,8 @@ public class lesson3_2 {
             System.out.println(prices[i]);
         }
 
+
+
     }
 
 

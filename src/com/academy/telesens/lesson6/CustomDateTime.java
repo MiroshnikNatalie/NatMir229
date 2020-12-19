@@ -56,4 +56,10 @@ public class CustomDateTime extends CustomDate {
         return super.toString() + " " + String.format("%02d",this.getHour()) + " " + String.format("%02d",this.getMinute()) + " "
                + String.format("%02d",this.getSecond()) ;
     }
+
+    public boolean invalid(int second)
+    {
+
+        return true;
+    }
 }

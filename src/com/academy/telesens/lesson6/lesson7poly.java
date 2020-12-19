@@ -18,5 +18,13 @@ public class lesson7poly {
 
         for (int i = 0; i < arrComponent.length; i++)
             arrComponent[i].draw();
+
+        //d) В цикле перебрать массив Component и вывести только Button и его потомков
+        System.out.println(" *** только Button-ы  и наследники *** ");
+
+        for (int i = 0; i < arrComponent.length; i++) {
+            if (arrComponent[i] instanceof Button)
+                    arrComponent[i].draw();
+        }
     }
 }

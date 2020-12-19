@@ -1,5 +1,7 @@
 package com.academy.telesens.lesson5;
 
+import com.academy.telesens.lesson6.DateFormat;
+
 import java.util.Scanner;
 
 public class lesson5dz {
@@ -29,7 +31,9 @@ public class lesson5dz {
         customDate.validate(myDay, myMonth, myYear);
         System.out.println(customDate.getFormattedDate(myDay, myMonth, myYear));
 
-        Operator oper = new Operator();
+        System.out.println("вывод в формате UK");
+        customDate.getFormattedDate(DateFormat.UK);
+       // Operator oper = new Operator();
 
     }
 }
