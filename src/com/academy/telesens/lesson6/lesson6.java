@@ -29,6 +29,7 @@ public class lesson6 {
       //  CustomDateTime customDateTime = new CustomDateTime(myYear, myMonth, myDay, myHour, myMin, mySec);
         CustomDateTime customDateTime = new CustomDateTime();
         Scanner scanner = new Scanner(System.in);
+        System.out.println("****************");
         System.out.println("Введите часы");
         int h1 = scanner.nextInt();
         customDateTime.setHour(h1);
