@@ -31,6 +31,7 @@ public class Person {
     }
 
     public void setAge(int age) {
+        if (age < 0) throw new AgeError();
         this.age = age;
     }
 

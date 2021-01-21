@@ -1,6 +1,7 @@
 package com.academy.telesens.lesson6;
 
 import com.academy.telesens.lesson5.CustomDate;
+import com.academy.telesens.lesson9.IllegalTimeException;
 
 public class CustomDateTime extends CustomDate {
     private int hour;
@@ -32,15 +33,30 @@ public class CustomDateTime extends CustomDate {
         return second;
     }
 
-    public void setHour(int hour) {
+    public int setHour(int hour) throws IllegalTimeException {
+        if (hour > 23 || hour < 0)
+        {
+            throw new IllegalTimeException("часы должны быть в промежутке от 0 до 23 включительно");
+        }
         this.hour = hour;
+        return hour;
     }
 
-    public void setMinute(int minute) {
+
+
+    public void setMinute(int minute) throws IllegalTimeException {
+        if (minute > 59 || minute < 0)
+        {
+            throw new IllegalTimeException("минуты должны быть в промежутке от 0 до 59 включительно");
+        }
         this.minute = minute;
     }
 
-    public void setSecond(int second) {
+    public void setSecond(int second) throws IllegalTimeException{
+        if (second > 59 || second < 0)
+        {
+            throw new IllegalTimeException("секунды должны быть в промежутке от 0 до 59 включительно");
+        }
         this.second = second;
     }
 

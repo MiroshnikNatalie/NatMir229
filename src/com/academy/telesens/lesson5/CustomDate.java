@@ -44,23 +44,28 @@ public class CustomDate {
                 System.out.println(String.format("%02d",this.getDay()) + "."
                         + String.format("%02d",this.getMonth()) + "."
                         + String.format("%04d",this.getYear()));
+                break;
             case UK:
                 System.out.println(String.format("%02d",this.getDay()) + "/"
                         + String.format("%02d",this.getMonth()) + "/"
                         + String.format("%04d",this.getYear()));
+                break;
 
             case USA:
                 System.out.println(String.format("%02d",this.getMonth()) + "-"
                         + String.format("%02d",this.getDay()) + "-"
                         + String.format("%04d",this.getYear()));
+                break;
             case ENG:
                 System.out.println(String.format("%02d",this.getDay()) + "-"
                         + String.format("%02d",this.getMonth()) + "-"
                         + String.format("%04d",this.getYear()));
+                break;
             case CUSTOM:
                 System.out.println(String.format("%02d",this.getDay()) + "."
                         + String.format("%02d",this.getMonth()) + "."
                         + String.format("%04d",this.getYear()));
+                break;
         }
 
     }

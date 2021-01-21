@@ -1,6 +1,8 @@
 package com.academy.telesens.lesson6;
 
-abstract class Component {
+import com.academy.telesens.lesson8.VisualComponent;
+
+abstract class Component implements VisualComponent {
     protected int xPozition;
     protected int yPozition;
     protected int wight;

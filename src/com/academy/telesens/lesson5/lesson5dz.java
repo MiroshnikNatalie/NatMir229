@@ -32,8 +32,9 @@ public class lesson5dz {
         System.out.println(customDate.getFormattedDate(myDay, myMonth, myYear));
 
         System.out.println("вывод в формате UK");
-        customDate.getFormattedDate(DateFormat.UK);
-       // Operator oper = new Operator();
+        customDate.getFormattedDate(DateFormat.RU);
+
+
 
     }
 }

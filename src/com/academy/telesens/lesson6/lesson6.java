@@ -1,5 +1,7 @@
 package com.academy.telesens.lesson6;
 
+import java.util.Scanner;
+
 public class lesson6 {
     public static void main(String[] args) {
 
@@ -26,9 +28,14 @@ public class lesson6 {
         int mySec = 35;
       //  CustomDateTime customDateTime = new CustomDateTime(myYear, myMonth, myDay, myHour, myMin, mySec);
         CustomDateTime customDateTime = new CustomDateTime();
-        customDateTime.setHour(15);
-        customDateTime.setMinute(05);
-        customDateTime.setSecond(15);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите часы");
+        int h1 = scanner.nextInt();
+        customDateTime.setHour(h1);
+        System.out.println("Введите минуты");
+        customDateTime.setMinute(scanner.nextInt());
+        System.out.println("Введите секунды");
+        customDateTime.setSecond(scanner.nextInt());
         customDateTime.setDay(25);
         customDateTime.setMonth(01);
         customDateTime.setYear(2017);
