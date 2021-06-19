@@ -1,5 +1,8 @@
 package com.academy.telesens.lesson12;
 
+import com.academy.telesens.lesson13.PropertyProvider;
+
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -7,6 +10,10 @@ import java.sql.Statement;
 public class mySqlWork {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/mobile?user=root&password=root";
+
+        String dbUrl2 = PropertyProvider.get("db.url");
+        System.out.println(dbUrl2);
+
 
         /*
         Добавить в БД Mobile используя sql запросы:

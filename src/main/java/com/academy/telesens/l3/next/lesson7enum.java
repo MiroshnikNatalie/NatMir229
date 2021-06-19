@@ -7,7 +7,7 @@ public class lesson7enum {
         person.setFirstName("Sergey");
         person.setLastName("Ivanov");
         person.setAge(35);
-        person.setGender(Gender.male);
+        person.setGender(Gender.MALE);
         person.getProile();
     }
 }
